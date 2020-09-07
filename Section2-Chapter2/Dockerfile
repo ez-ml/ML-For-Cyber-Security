@@ -5,10 +5,8 @@ USER root
 WORKDIR /app
 
 RUN apt-get -y update && \
-    apt-get -y install wget zip
-
-
-RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+    apt-get -y install wget zip && \
+    wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
     /opt/conda/bin/conda clean -tipsy && \
@@ -18,9 +16,8 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
-RUN conda create --name malware-env python=3.8
-
-RUN /bin/bash -c ". activate malware-env && \
+RUN conda create --name malware-env python=3.8 && \
+    /bin/bash -c ". activate malware-env && \
     conda install --yes --freeze-installed\
     nomkl \
     matplotlib \
@@ -32,8 +29,8 @@ RUN /bin/bash -c ". activate malware-env && \
     && find /opt/conda/ -follow -type f -name '*.js.map' -delete"
 
 
-
 RUN echo "PATH="/opt/conda/envs/malware-env/bin:${PATH}"" >> ~/.bashrc
+
 ENV PATH="/opt/conda/envs/malware-env/bin:${PATH}"
 
 

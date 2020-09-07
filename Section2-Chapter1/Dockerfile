@@ -18,8 +18,15 @@ ENV PATH="/opt/conda/bin:${PATH}"
 
 WORKDIR /app
 
-COPY environment.yml .
-RUN  conda env create -f environment.yml
+RUN conda create --name malware-env python=3.8
+
+RUN /bin/bash -c ". activate malware-env && \
+    conda install --yes \
+    scikit-learn \
+    matplotlib \
+    pandas \
+    jupyter"
+
 
 RUN echo "PATH="/opt/conda/envs/malware-env/bin:${PATH}"" >> ~/.bashrc
 ENV PATH="/opt/conda/envs/malware-env/bin:${PATH}"
