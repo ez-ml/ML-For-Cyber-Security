@@ -21,7 +21,7 @@ RUN conda create --name malware-env python=3.8 && \
     conda install --yes --freeze-installed\
     nomkl \
     matplotlib \
-    && pip install scikit-learn pandas jupyter\
+    && pip install scikit-learn pandas jupyterlab\
     && conda clean -afy \
     && conda clean -afy \
     && find /opt/conda/ -follow -type f -name '*.a' -delete \

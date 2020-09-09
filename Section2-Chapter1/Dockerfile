@@ -25,7 +25,7 @@ RUN /bin/bash -c ". activate malware-env && \
     scikit-learn \
     matplotlib \
     pandas \
-    jupyter"
+    jupyterlab"
 
 
 RUN echo "PATH="/opt/conda/envs/malware-env/bin:${PATH}"" >> ~/.bashrc
