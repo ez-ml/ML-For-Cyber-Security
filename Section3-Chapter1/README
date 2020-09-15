@@ -1,0 +1,6 @@
+Demo:- Running spark application on Kubernetes Cluster .
+Show Driver and Executor configuration.
+Show how pods get created .
+Show spark UI
+
+Show sample Label DF
