@@ -1,6 +1,8 @@
+Talk about Spylon Kernel for Scala
+
 Demo:- Running spark application on Kubernetes Cluster .
 Show Driver and Executor configuration.
-Show how pods get created .
+Show how Kubernetes pods get created for Spark Executors.
 Show spark UI
 
 Show sample Label DF

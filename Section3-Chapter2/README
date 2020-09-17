@@ -1,0 +1,11 @@
+Feature Engineering using Spark Dataframe in Scala .
+
+Show default partitions and explain Right balance of repartitioning .
+
+
+Show S3 Parquet Output
+
+Explain that why we have two feature engineering file, and show the difference in executor and core resources requested .
+
+
+Package the application using sbt , docker and submit it .
