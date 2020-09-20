@@ -48,3 +48,16 @@ local:///opt/spark/work-dir/malwarefeatureengineering_2.11-1.0.jar
 Docker build -t hishailesh77/feature1:v1 -f FeatureEngineering.Dockerfile .
 Docker push hishailesh77/feature1:v1
 kubectl apply -f Feature1-deployment.yaml
+
+
+sbt package
+Docker build -t hishailesh77/spark_3_0_1:latest -f Base3_0_1.Dockerfile . && docker push hishailesh77/spark_3_0_1:latest \
+&& Docker build -t hishailesh77/feature:v1 -f FeatureEngineering.Dockerfile . &&  Docker push hishailesh77/feature:v1 \
+&& kubectl delete job malware-feature && kubectl apply -f Feature-Job.yaml
+
+
+
+
+
+
+
