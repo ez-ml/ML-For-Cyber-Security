@@ -56,8 +56,19 @@ Docker build -t hishailesh77/spark_3_0_1:latest -f Base3_0_1.Dockerfile . && doc
 && kubectl delete job malware-feature && kubectl apply -f Feature-Job.yaml
 
 
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm repo update
+
+
+helm install prometheus stable/prometheus-operator
+
+helm install prometheus-operator prometheus-community/kube-prometheus-stack
 
 
 
 
+kubectl apply -f Spark-Job-Deployment.yaml
+Kubectl delete job spark-job && kubectl delete service spark-app-lb &&  kubectl delete service spark-svc-headless && kubectl delete service spark-app-lb
+Kubectl delete job malware-feature && kubectl delete service malware-feature &&  kubectl delete service malware-feature-headless && kubectl delete service malware-feature-lb
 
