@@ -1,6 +1,11 @@
 Machine learning"
-1) Logistic Regression in Pyspark using Notebook. Save and Load the Model. Package the code and run spark submit using Docker and Kubernetes
-3) Talk about different ML models supported in Spark
+
 2) XGBoost in Spark using Notebook. Package the code and run spark submit using Docker and Kubernetes.
 3) H2O AutoML Pyspark using Notebook.
+
+
+
+
+
+Docker build -t hishailesh77/malware_spark_job:v1 -f Spark_App_3_0_1.Dockerfile . && docker push hishailesh77/malware_spark_job:v1
 

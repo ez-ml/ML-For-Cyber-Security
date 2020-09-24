@@ -1,8 +1,15 @@
-Talk about Spylon Kernel for Scala
+1) Discussion about Spark on Kubernetes.
+2) Building the base docker images for spark
+3) Build the Jupyter Image and Talk about Spylon Kernel for Scala
+4) Walkthrough for Kubernetes YAML
+5) Running spark application Demo application on Kubernetes Cluster using Jupyter .
+6) Show Driver and Executor configuration.
+7) how how Kubernetes pods get created for Spark Executors.
+8) Show spark UI for running application .
 
-Demo:- Running spark application on Kubernetes Cluster .
-Show Driver and Executor configuration.
-Show how Kubernetes pods get created for Spark Executors.
-Show spark UI
 
-Show sample Label DF
+Commands
+
+docker build -t hishailesh77/spark_3_0_1 -f Base3_0_1.Dockerfile . && docker push hishailesh77/spark_3_0_1
+
+docker build -t hishailesh77/jupyter_spark_3_0_1:latest -f Spark_Jupyter_3_0_1.Dockerfile . && docker push hishailesh77/jupyter_spark_3_0_1:latest
