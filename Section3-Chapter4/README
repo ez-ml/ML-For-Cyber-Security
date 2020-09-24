@@ -1,3 +1,8 @@
 XGBost
 H2O
 Spark with Keras .
+
+Docker build -t hishailesh77/spark-xgboost:latest -f H2O.Dockerfile . && docker push hishailesh77/spark-xgboost:latest
+./jupyter-deployment-delete.sh
+./jupyter-deployment-create.sh
+
