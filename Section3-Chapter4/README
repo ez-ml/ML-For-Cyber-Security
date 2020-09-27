@@ -1,6 +1,5 @@
 1) Explain XGBost
 2) Explain H2O , H2O Flow-UI
-Spark with Keras .
 
 Docker build -t hishailesh77/spark-xgboost:latest -f XGBoost.Dockerfile . && docker push hishailesh77/spark-xgboost:latest
 ./jupyter-deployment-delete.sh
@@ -9,3 +8,4 @@ Docker build -t hishailesh77/spark-xgboost:latest -f XGBoost.Dockerfile . && doc
 
 Docker build -t hishailesh77/spark-h2o:latest -f H2O.Dockerfile . && docker push hishailesh77/spark-h2o:latest
 
+Docker build -t hishailesh77/spark-tf:latest -f Spark-TF.Dockerfile . && docker push hishailesh77/spark-tf:latest

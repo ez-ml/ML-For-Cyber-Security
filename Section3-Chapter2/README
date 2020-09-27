@@ -31,7 +31,7 @@ sbt package
 Docker build -t hishailesh77/spark_3_0_1:latest -f Base3_0_1.Dockerfile . && docker push hishailesh77/spark_3_0_1:latest \
 && Docker build -t hishailesh77/feature:v1 -f FeatureEngineering.Dockerfile . &&  Docker push hishailesh77/feature:v1 \
 && kubectl delete job malware-feature && kubectl apply -f Feature-Job.yaml
-
+q
 
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/

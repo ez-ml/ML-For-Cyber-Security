@@ -1,0 +1,6 @@
+Ch 1:- Environment Setup
+Understanding Docker, Conda, Jupyter Notebook
+
+
+
+docker build -t ml-image-1 .
