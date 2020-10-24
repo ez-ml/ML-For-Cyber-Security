@@ -20,7 +20,7 @@ RUN conda create --name malware-env python=3.8 && \
     /bin/bash -c ". activate malware-env && \
     conda install --yes --freeze-installed\
     nomkl \
-    matplotlib \z
+    matplotlib \
     && pip install scikit-learn pandas jupyterlab\
     && conda clean -afy \
     && conda clean -afy \
