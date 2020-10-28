@@ -1,16 +1,5 @@
 #Download the dataset from following link .
 Dataset :- https://drive.google.com/drive/folders/1jsQPWKxe8ql2EcpSGXP7_6nXYRyB0zv-
 
-
-
-
-
-
-Chapter 2: Labelling the data using Unsupervised Machine Learning (K mean Clustering).
-    Step 1:- Installation and Setup Instruction. Install and Activate Conda environment . Install Juypeter, Pandas and SciKit Learn .
-    Step 2 :- Launch Juypeter and Start doing Data Analysis for Clustering Demo. Create DataFrame for FileName and RawText.
-    Step 3 :- Theory on Text Analysis , Vectorization. Different Types OF Vectorization . Use Of Count Vectorizer.
-    Step 4 :- Seaborn vizualization for clustering
-    Step 4 :- Theory on Clustering , Labeling the Data , Using K Mean with Seaborn Visualization .
-    Step 5 :- Save the final output as Labeled Files.
+Please comment in an underlying video with you email address, and i will share the given dataset with you .
 
