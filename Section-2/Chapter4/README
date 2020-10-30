@@ -1,3 +1,5 @@
-AUTO ML Frameworks
+1) #Build the docker image from "Dockerfile" and tag it as "ml-image-4".
+docker build -t ml-image-4 .
 
- Use count_vectorizer.csv.zip for final analysis from Chapter 2
+2) #Run the docker image 4.
+docker run -p 8888:8888 -p 54321:54321 ml-image-4:latest

@@ -1,5 +1,7 @@
 FROM hishailesh77/ml-image-2
 
+RUN apt-get -y update
+
 RUN apt-get -y install openjdk-8-jdk
 
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
