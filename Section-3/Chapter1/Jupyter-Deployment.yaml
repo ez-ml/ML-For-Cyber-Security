@@ -33,17 +33,6 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: jupyter-headless
-spec:
-  clusterIP: None
-  selector:
-    component: jupyter-lab
-
----
-
-kind: Service
-apiVersion: v1
-metadata:
   name: jupyter-lab
 spec:
   ports:
@@ -86,3 +75,14 @@ spec:
       port: 20020
       targetPort: 20020
 ---
+kind: Service
+apiVersion: v1
+metadata:
+  name: jupyter-headless
+spec:
+  clusterIP: None
+  selector:
+    component: jupyter-lab
+
+---
+
