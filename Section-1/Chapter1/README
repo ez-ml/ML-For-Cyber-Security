@@ -1,0 +1,28 @@
+Links discussed in the tutorial
+
+Docker Desktop          :- https://docs.docker.com/desktop/
+Kubernetes Kubectl      :- https://kubernetes.io/docs/tasks/tools/install-kubectl/
+IntelliJ IDEA           :- https://www.jetbrains.com/idea/download
+Docker Hub              :- https://hub.docker.com/
+Docker best practises   :- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#dockerfile-instructions
+
+
+Docker commands discussed in the tutorial
+
+1) #List the current docker images in the local image cache .
+docker images --all
+
+2) #Build the docker image from "1.Dockerfile" and tag it as "ml-image-1".
+docker build -t ml-image-1 -f 1.Dockerfile .
+
+3) #Run the docker image 1.
+docker run -p 8888:8888 ml-image-1:latest
+
+4) #Build the docker image from "2.Dockerfile" and tag it as "ml-image-2". This is optimized image.
+docker build -t ml-image-2 -f 2.Dockerfile .
+
+5) #Run the docker image 2.
+docker run -p 8888:8888 ml-image-2:latest
+
+
+

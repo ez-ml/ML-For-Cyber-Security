@@ -1,0 +1,10 @@
+#Download the dataset from following link .
+Dataset URL - https://drive.google.com/drive/folders/1_WcJm89bhTvjHxiGuvD_9q7msK08gIHM?usp=sharing
+
+Please comment in an underlying video with you email address, and i will share the given dataset with you .
+
+1) #Build the docker image from "Dockerfile" and tag it as "ml-image-3".
+docker build -t ml-image-3 .
+
+2) #Run the docker image 3.
+docker run -p 8888:8888 ml-image-3:latest

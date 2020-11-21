@@ -1,28 +1,19 @@
-Links discussed in the tutorial
+#Git Repo
+https://github.com/ez-ml/ML-For-Cyber-Security.git
 
-Docker Desktop          :- https://docs.docker.com/desktop/
-Kubernetes Kubectl      :- https://kubernetes.io/docs/tasks/tools/install-kubectl/
-IntelliJ IDEA           :- https://www.jetbrains.com/idea/download
-Docker Hub              :- https://hub.docker.com/
-Docker best practises   :- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#dockerfile-instructions
+#Dataset download URL
+https://drive.google.com/file/d/1Fkyk1GdgDibTC7if1cGyBA5V9HaHh_GO
 
 
-Docker commands discussed in the tutorial
+#Docker command to build and push spark base image .
+docker build -t hishailesh77/spark_3_0_1:latest -f Spark_Base_3_0_1.Dockerfile . && docker push hishailesh77/spark_3_0_1:latest
 
-1) #List the current docker images in the local image cache .
-docker images --all
+#Docker command to build the Jupyter Image with Spylon Kernel for Scala
+docker build -t hishailesh77/jupyter_spark_3_0_1:latest -f Spark_Jupyter_3_0_1.Dockerfile  . && docker push hishailesh77/jupyter_spark_3_0_1:latest
 
-2) #Build the docker image from "1.Dockerfile" and tag it as "ml-image-1".
-docker build -t ml-image-1 -f 1.Dockerfile .
+#Kubectl command to execute the yaml file
+./jupyter-deployment-create.sh .
 
-3) #Run the docker image 1.
-docker run -p 8888:8888 ml-image-1:latest
-
-4) #Build the docker image from "2.Dockerfile" and tag it as "ml-image-2". This is optimized image.
-docker build -t ml-image-2 -f 2.Dockerfile .
-
-5) #Run the docker image 2.
-docker run -p 8888:8888 ml-image-2:latest
 
 
 
