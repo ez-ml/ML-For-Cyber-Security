@@ -23,8 +23,8 @@ RUN conda create --name malware-env python=3.8
 RUN /bin/bash -c ". activate malware-env && \
     conda install --yes \
     scikit-learn \
-    matplotlib \
     pandas \
+    matplotlib \
     jupyterlab"
 
 
