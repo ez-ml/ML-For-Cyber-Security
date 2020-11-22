@@ -3,3 +3,8 @@ Dataset :- https://drive.google.com/drive/folders/1jsQPWKxe8ql2EcpSGXP7_6nXYRyB0
 
 Please comment in an underlying video with you email address, and i will share the given dataset with you .
 
+
+Docker commands discussed in the tutorial
+
+1) #Run the docker image 2.
+docker run -p 8888:8888 ml-image-2:latest
