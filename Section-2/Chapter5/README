@@ -1,7 +1,42 @@
-Experiment Tracking with MLFlow. Hyperpot and XGBoost
+1) Installation of cuda framework on the host
+   curl -O https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+   sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+   sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+   sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+   sudo apt update -y
+   sudo apt install cuda -y
+
+2) Verify GPU and cuda
+    nvidia-smi
+
+3) Install nvidia docker
+
+   docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+   sudo apt-get purge -y nvidia-docker
+
+   curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+   sudo apt-key add -
+   distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+
+   curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+   sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+   sudo apt-get update
+   sudo apt-get install -y nvidia-docker2
+
+   sudo pkill -SIGHUP dockerd
+
+   sudo nvidia-container-cli --load-kmods info
+
+4) Verify nvidia docker
+
+   sudo docker run --runtime=nvidia -it nvidia/cuda nvidia-smi
 
 
+5) Run docker image with RAPIDS
+   docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 rapidsai/rapidsai
 
+6) Download dataset
+  https://drive.google.com/file/d/1Fkyk1GdgDibTC7if1cGyBA5V9HaHh_GO
+  Note :- Please comment in an underlying video with you email address, and i will share the given dataset with you .
 
-Ref
-https://www.youtube.com/watch?v=Kj9B71zLthg

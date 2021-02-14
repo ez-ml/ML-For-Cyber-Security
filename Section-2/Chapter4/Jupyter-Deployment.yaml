@@ -18,7 +18,7 @@ spec:
       containers:
         - name: jupyter-lab
           imagePullPolicy: Always
-          image: hishailesh77/spark-tf:latest
+          image: hishailesh77/spark-h2o:latest
           command: ["/bin/bash"]
           args: ["-c", "jupyter notebook --no-browser --ip=0.0.0.0 --port 8888 --allow-root --NotebookApp.token='' --NotebookApp.password=''"]
           ports:

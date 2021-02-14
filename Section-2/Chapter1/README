@@ -1,18 +1,14 @@
-#Git Repo
-https://github.com/ez-ml/ML-For-Cyber-Security.git
-
-#Dataset download URL
-https://drive.google.com/file/d/1Fkyk1GdgDibTC7if1cGyBA5V9HaHh_GO
-
-
-#Docker command to build and push spark base image .
+1) #Docker command to build and push spark base image .
 docker build -t hishailesh77/spark_3_0_1:latest -f Spark_Base_3_0_1.Dockerfile . && docker push hishailesh77/spark_3_0_1:latest
 
-#Docker command to build the Jupyter Image with Spylon Kernel for Scala
+2) #Docker command to build the Jupyter Image with Spylon Kernel for Scala
 docker build -t hishailesh77/jupyter_spark_3_0_1:latest -f Spark_Jupyter_3_0_1.Dockerfile  . && docker push hishailesh77/jupyter_spark_3_0_1:latest
 
-#Kubectl command to execute the yaml file
+3) #Kubectl command to execute the yaml file
 ./jupyter-deployment-create.sh .
+
+4) #Dataset download URL
+https://drive.google.com/file/d/1Fkyk1GdgDibTC7if1cGyBA5V9HaHh_GO
 
 
 

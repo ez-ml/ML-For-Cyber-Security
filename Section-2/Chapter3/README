@@ -1,11 +1,10 @@
-Machine learning"
+1) SBT command to build the JAR file
+sbt package
 
-2) XGBoost in Spark using Notebook. Package the code and run spark submit using Docker and Kubernetes.
-3) H2O AutoML Pyspark using Notebook.
-
-
-
-
-
+2) Docker command to build the image
 Docker build -t hishailesh77/malware_spark_job:v1 -f Spark_App_3_0_1.Dockerfile . && docker push hishailesh77/malware_spark_job:v1
 
+3) Run kubernetes job (One at a time).
+kubectl apply -f Spark-Job-1.yaml
+kubectl apply -f Spark-Job-2.yaml
+kubectl apply -f Spark-Job-3.yaml

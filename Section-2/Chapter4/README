@@ -1,11 +1,12 @@
-1) Explain XGBost
-2) Explain H2O , H2O Flow-UI
+1) #Build the docker image from "Dockerfile" and tag it as "spark-xgboost:latest".
+Docker build -t hishailesh77/spark-xgboost:latest -f Spark-XGBoost.Dockerfile . && docker push hishailesh77/spark-xgboost:latest
+Note :- replace "hishailesh77" with your docker hub account name .
 
-Docker build -t hishailesh77/spark-xgboost:latest -f XGBoost.Dockerfile . && docker push hishailesh77/spark-xgboost:latest
+2) Delete the existing kubernetes services and object
 ./jupyter-deployment-delete.sh
+
+3) Create new kubernetes deployment.
 ./jupyter-deployment-create.sh
 
-
-Docker build -t hishailesh77/spark-h2o:latest -f H2O.Dockerfile . && docker push hishailesh77/spark-h2o:latest
-
-Docker build -t hishailesh77/spark-tf:latest -f Spark-TF.Dockerfile . && docker push hishailesh77/spark-tf:latest
+4) Build the docker file to include H2O auto ML.
+Docker build -t hishailesh77/spark-h2o:latest -f Spark-H2O.Dockerfile . && docker push hishailesh77/spark-h2o:latest

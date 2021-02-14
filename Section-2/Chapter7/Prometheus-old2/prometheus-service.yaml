@@ -1,0 +1,26 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: prometheus
+spec:
+  ports:
+    - name: web
+      port: 9090
+  selector:
+    prometheus: prometheus
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-lb
+spec:
+  type: LoadBalancer
+  selector:
+    prometheus: prometheus
+  ports:
+    - name: web
+      protocol: TCP
+      port: 9090
+      targetPort: 9090

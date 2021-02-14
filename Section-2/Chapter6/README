@@ -1,1 +1,2 @@
-Monitoring the Infrastructure using Spark UI , Promethius , Graphana .
+1) Build the docker file .
+Docker build -t hishailesh77/tensorflow:latest -f Tensorflow.Dockerfile . && docker push hishailesh77/tensorflow:latest
