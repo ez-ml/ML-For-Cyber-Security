@@ -54,7 +54,7 @@ model = LudwigModel(config=config, logging_level=logging.INFO)
     output_directory,  # location of training results stored on disk
 ) = model.train(
     dataset="s3://symc-malware-dataset/rotten_tomatoes.csv",
-    experiment_name="imdb_sentiment",
+    experiment_name="imdb_sentiment_1",
     model_name="bloom3b",
 )
 
