@@ -168,7 +168,7 @@ if __name__ == "__main__":
     trainer = TorchTrainer(
         train_func,
         train_loop_config=training_config,
-        scaling_config=ScalingConfig(num_workers=4, use_gpu=True),
+        scaling_config=ScalingConfig(num_workers=2, use_gpu=True),
         datasets=ray_datasets,
         dataset_config=DataConfig(datasets_to_split=["train", "validation"]),
         # If running in a multi-node cluster, this is where you
