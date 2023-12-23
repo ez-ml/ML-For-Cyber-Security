@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
     trainer = TorchTrainer(
         train_func_distributed,
-        scaling_config=ScalingConfig(num_workers=4, use_gpu=use_gpu)
+        scaling_config=ScalingConfig(num_workers=2, use_gpu=use_gpu)
     )
 
     results = trainer.fit()
