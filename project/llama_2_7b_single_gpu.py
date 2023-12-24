@@ -68,8 +68,6 @@ generation:
 adapter:
   type: lora
 
-quantization:
-  bits: 4
 
 preprocessing:
   global_max_sequence_length: 512
