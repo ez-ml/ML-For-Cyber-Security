@@ -39,7 +39,7 @@ df = df.head(n=1000)
 qlora_fine_tuning_config = yaml.safe_load(
 """
 model_type: llm
-base_model: Trelis/Llama-2-7b-chat-hf-sharded-bf16
+base_model: mistralai/Mixtral-8x7B-Instruct-v0.1
 
 input_features:
   - name: instruction
