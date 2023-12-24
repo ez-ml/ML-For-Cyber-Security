@@ -39,7 +39,7 @@ df = df.head(n=1000)
 qlora_fine_tuning_config = yaml.safe_load(
 """
 model_type: llm
-base_model: mistralai/Mixtral-8x7B-Instruct-v0.1
+base_model: meta-llama/Llama-2-7b-hf
 
 input_features:
   - name: instruction
