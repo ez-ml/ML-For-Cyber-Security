@@ -39,7 +39,7 @@ df = df.head(n=1000)
 qlora_fine_tuning_config = yaml.safe_load(
 """
 model_type: llm
-base_model: meta-llama/Llama-2-7b-hf
+base_model: Trelis/Llama-2-7b-chat-hf-sharded-bf16
 
 input_features:
   - name: instruction
@@ -106,6 +106,3 @@ backend:
 
 model = LudwigModel(config=qlora_fine_tuning_config, logging_level=logging.INFO)
 results = model.train(dataset=df)
-
-
-
